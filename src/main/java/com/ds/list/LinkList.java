@@ -2,7 +2,7 @@ package com.ds.list;
 
 public class LinkList {
 
-	private Link first;
+	 Link first;
 	
 	public boolean isEmpty(){
 		return (first == null);
@@ -59,5 +59,8 @@ public class LinkList {
 		}
 		
 	}
-	
+
+	public ListIterator getIterator(){
+		return new ListIterator(this);
+	}
 }
