@@ -67,6 +67,7 @@ public class PriorityQueue {
 		for (int i = 0; i < nElems - 1; i++) {
 			queArray[i] = queArray[i + 1];
 		}
+		nElems--;
 	}
 
 }
