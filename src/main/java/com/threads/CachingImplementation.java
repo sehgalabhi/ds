@@ -102,8 +102,9 @@ public class CachingImplementation {
         }
     }
 
+    //putifAbsent
     private class Memorizer4<A,V> implements Computable<A,V>{
-        private final Map<A, Future<V>> cache = new ConcurrentHashMap<A, Future<V>>();
+        private final Map<A, Future<V>> cache = new ConcurrentHashMap<>();
         final Computable<A,V> expensiveFunction;
 
         private Memorizer4(Computable<A, V> expensiveFunction) {
@@ -123,6 +124,7 @@ public class CachingImplementation {
                 FutureTask<V> vFutureTask = new FutureTask<V>(eval);
                 cache.putIfAbsent(arg, vFutureTask);
                 vFutureTask.run();
+                vFuture = vFutureTask;
             }
             try {
                 return vFuture.get();
