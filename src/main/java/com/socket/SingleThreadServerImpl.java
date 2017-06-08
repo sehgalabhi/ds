@@ -18,7 +18,7 @@ public class SingleThreadServerImpl {
             throw new IllegalStateException("No port specified");
         }
 
-        int portNumber = Integer.parseInt(args[0]);
+        int portNumber = Integer.parseInt("4445");
         try (
                 ServerSocket serverSocket = new ServerSocket(portNumber);
                 Socket clientSocket = serverSocket.accept();

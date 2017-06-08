@@ -9,15 +9,27 @@ import java.net.Socket;
 /**
  * Created by asehgal on 5/10/2017.
  */
-public class ClientImpl1 {
+public class ClientImplAndori {
+    private final static String JSON_STRING_SUCCESS = "{transactionAmount: 400," +
+            "otherAmount: 0," +
+            "currencyCode: 840," +
+            "transactionType: 1," +
+            "unpredictableNumber: 11224455," +
+            "cryptogramType: UCAF," +
+            "transactionDate: {" +
+            "year: 15," +
+            "month: 7," +
+            "day: 13" +
+            "},countryCode: 840" +
+            "}";
 
     public static void main(String[] args) throws IOException {
        /* if (null == args[0] || null == args[1]) {
             throw new IllegalStateException("No hostanme or  port specified");
         }*/
 
-        String hostName = "localhost";
-        int port = Integer.parseInt("6000");
+        String hostName = "10.6.4.86";
+        int port = Integer.parseInt("3232");
 
         try (Socket socket = new Socket(hostName, port);
              PrintWriter printWriter = new PrintWriter(socket.getOutputStream(), true);
@@ -26,14 +38,10 @@ public class ClientImpl1 {
 
         ) {
             String userInput, serverResponse;
+            printWriter.println(JSON_STRING_SUCCESS);
             while ((serverResponse = in.readLine()) != null) {
                 System.out.println("serverResponse" + serverResponse);
 
-                userInput = stdIn.readLine();
-                if (userInput != null) {
-                    System.out.println("Client :" + userInput);
-                    printWriter.println(userInput);
-                }
 
 
             }
