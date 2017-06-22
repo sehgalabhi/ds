@@ -9,6 +9,12 @@ public class ByteValueToHex {
     }
 
     private void test() {
+
+        System.out.println(Boolean.valueOf("fdsfasdfdf"));
+
+        System.out.println(Boolean.valueOf(false));
+        System.out.println(Boolean.valueOf("true"));
+
         byte[] bytes = {115, 13, 108, 8, -1};
         StringBuilder stringBuilder = new StringBuilder();
         for (byte b : bytes
