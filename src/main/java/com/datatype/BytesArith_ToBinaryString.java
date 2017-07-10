@@ -3,21 +3,22 @@ package com.datatype;
 /**
  * Created by asehgal on 6/21/2017.
  */
-public class BytesArith {
+public class BytesArith_ToBinaryString {
 
     static final char[] digits = new char[]{'0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'};
     public static void main(String[] args) {
-        new BytesArith().test();
+        new BytesArith_ToBinaryString().test();
     }
 
     private void test() {
 
-        byte a=36, temp = 36;
-        byte b = -3;
+        //byte a=36, temp = 36;
+        //byte b = -3;
+        short b = 128;
        // byte temp1 = (byte) (temp >>>3);
         //System.out.println(temp>>>1);
       //  System.out.println(Integer.toBinaryString(temp));
-        System.out.println(toBinaryString(a ));
+        System.out.println("Unformatted value "+ toBinaryString(b ));
 
         System.out.println(Integer.toBinaryString(b & 0xFF));
         System.out.println(b);
@@ -55,26 +56,31 @@ public class BytesArith {
         if(var0 == 0) {
             return 32;
         } else {
+            System.out.println(Integer.toBinaryString(var0));
             int var1 = 1;
             if(var0 >>> 16 == 0) {
                 var1 += 16;
                 var0 <<= 16;
             }
+            System.out.println(Integer.toBinaryString(var0));
 
             if(var0 >>> 24 == 0) {
                 var1 += 8;
                 var0 <<= 8;
             }
+            System.out.println(Integer.toBinaryString(var0));
 
             if(var0 >>> 28 == 0) {
                 var1 += 4;
                 var0 <<= 4;
             }
+            System.out.println(Integer.toBinaryString(var0));
 
             if(var0 >>> 30 == 0) {
                 var1 += 2;
                 var0 <<= 2;
             }
+            System.out.println(Integer.toBinaryString(var0));
 
             var1 -= var0 >>> 31;
             return var1;
