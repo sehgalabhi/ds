@@ -11,6 +11,6 @@ public class PizzaSimulator {
 
     private void test() {
         PizzaStore pizzaStore = new NYPizzaStore();
-        pizzaStore.orderPizza();
+       // pizzaStore.orderPizza();
     }
 }

@@ -28,7 +28,7 @@ public class ClientImplAndori {
             throw new IllegalStateException("No hostanme or  port specified");
         }*/
 
-        String hostName = "10.6.4.86";
+        String hostName = "10.6.4.249";
         int port = Integer.parseInt("3232");
 
         try (Socket socket = new Socket(hostName, port);
