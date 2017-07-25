@@ -3,10 +3,10 @@ package com.codinginter.one;
 /**
  * Created by asehgal on 7/25/2017.
  */
-public class AreStringsPermutationEachOther {
+public class Two_AreStringsPermutationEachOther {
 
     public static void main(String[] args) {
-        new AreStringsPermutationEachOther().test();
+        new Two_AreStringsPermutationEachOther().test();
     }
 
     private void test() {

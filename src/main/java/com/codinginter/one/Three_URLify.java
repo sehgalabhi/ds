@@ -3,10 +3,10 @@ package com.codinginter.one;
 /**
  * Created by asehgal on 7/25/2017.
  */
-public class URLify {
+public class Three_URLify {
 
     public static void main(String[] args) {
-        new URLify().test();
+        new Three_URLify().test();
         
     }
 

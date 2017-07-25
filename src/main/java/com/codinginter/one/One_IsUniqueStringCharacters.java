@@ -3,10 +3,10 @@ package com.codinginter.one;
 /**
  * Created by asehgal on 7/25/2017.
  */
-public class IsUniqueStringCharacters {
+public class One_IsUniqueStringCharacters {
 
     public static void main(String[] args) {
-        new IsUniqueStringCharacters().test();
+        new One_IsUniqueStringCharacters().test();
     }
 
     private void test() {
