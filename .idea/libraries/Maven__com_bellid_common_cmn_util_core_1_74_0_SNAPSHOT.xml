@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: com.bellid.common:cmn-util-core:1.74.0-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/bellid/common/cmn-util-core/1.74.0-SNAPSHOT/cmn-util-core-1.74.0-20171101.141913-8.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/com/bellid/common/cmn-util-core/1.74.0-SNAPSHOT/cmn-util-core-1.74.0-20171101.141913-8-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/bellid/common/cmn-util-core/1.74.0-SNAPSHOT/cmn-util-core-1.74.0-20171101.141913-8-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

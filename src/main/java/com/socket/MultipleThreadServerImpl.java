@@ -11,11 +11,13 @@ public class MultipleThreadServerImpl {
 
     public static void main(String[] args) throws IOException {
 
+/*
         if (null == args[0] || "".equals(args[0])) {
             throw new IllegalStateException("No port specified");
         }
+*/
 
-        int portNumber = Integer.parseInt(args[0]);
+        int portNumber = Integer.parseInt("4444");
         try (
                 ServerSocket serverSocket = new ServerSocket(portNumber)
         ) {
