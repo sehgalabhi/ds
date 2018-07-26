@@ -1,12 +1,17 @@
 package com.ds.binaryheaps;
 
 import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
 
 public class HeapOrder {
 
 
     public static void main(String[] args) {
         new HeapOrder().test();
+
+        Map<String, String> vars = new HashMap<>();
+        Map<String, String> vars1 = new HashMap();
     }
 
     private void test() {

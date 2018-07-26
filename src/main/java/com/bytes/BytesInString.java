@@ -1,10 +1,5 @@
 package com.bytes;
 
-import com.bellid.util.StringUtilities;
-
-import java.nio.charset.Charset;
-import java.security.MessageDigest;
-import java.security.NoSuchAlgorithmException;
 
 public class BytesInString {
     public static void main(String[] args) {
@@ -12,29 +7,19 @@ public class BytesInString {
     }
 
     private void test() {
-        try {
-
-            String testString = "HelloWorld";
-            byte[] bytesOrig = testString.getBytes();
-
-            String s = StringUtilities.toHexString(testString.getBytes());
-            System.out.println(s);
-
-            byte[] bytes = StringUtilities.fromHexString(s);
-            String result = new String(bytes);
-            System.out.println(result);
-            MessageDigest messageDigest = MessageDigest.getInstance("SHA-256");
-            byte[] digest = messageDigest.digest(testString.getBytes());
 
 
-            byte[] bytes1 = testString.getBytes(Charset.forName("UTF-16"));
-            String s1 = StringUtilities.toHexString(testString.getBytes(Charset.forName("UTF-16")));
-            System.out.println(s1);
+        int val = 0x0A;
+        System.out.println(val);
+
+        byte a = (byte) -127;
+        System.out.println(a);
+
+        byte b = 'Z';
+
+        String testString = "HelloWorld";
+        byte[] bytesOrig = testString.getBytes();
 
 
-
-        } catch (NoSuchAlgorithmException e) {
-            e.printStackTrace();
-        }
     }
 }
