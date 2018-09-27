@@ -38,37 +38,47 @@ public class CounterGame {
     }
 
     private static long highestPowerOf2(long i) {
-        int start = 0;
-        long val = 2;
+
 
         if (isPowerOf2(i)) {
             return i / 2;
         }
 
-        while (val <= i && (Long.MAX_VALUE - val >=val) && (val << start + 1) <= i) {
-            start++;
-            val <<= start;
+        long n = findHigestNumber(i);
+
+
+        return i - n;
+    }
+
+    private static long findHigestNumber(long i) {
+        long val = 2;
+
+        while (true) {
+            if(Long.MAX_VALUE - val < val){
+                return val;
+            }
+            if((val << 1) > i){
+                return val;
+            }
+            val = val << 1;
+
         }
-        return i - val;
     }
 
     private static boolean isPowerOf2(long i) {
-        int start = 0;
         long val = 2;
-        long res = 0;
         while (true) {
-            if(Long.MAX_VALUE - res >res) {
-                return false;
-            }
-            res = val << start;
-            if (res == i) {
+            if (val == i) {
                 return true;
-            } else if (res > i) {
+            } else if (val > i) {
                 return false;
             }
-            start++;
-        }
+            if(Long.MAX_VALUE - val < val){
+                return false;
+            }
 
+            val = val << 1;
+        }
     }
 
 }

@@ -5,7 +5,9 @@ import java.util.Arrays;
 import java.util.Comparator;
 import java.util.IntSummaryStatistics;
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
+import java.util.function.Function;
 import java.util.stream.Collectors;
 
 import static java.util.stream.Collectors.*;
@@ -29,9 +31,14 @@ public class CollectorsTest {
     }
 
     private void test() {
+
+        testMapOps();
+
         //reducing
         testCount();
         testMaxCalory();
+
+
 
         //summarizing
         testTotalCalories();
@@ -40,6 +47,12 @@ public class CollectorsTest {
         testReducing();
         testIncorrectReducing();
         testCorrectReducing();
+    }
+
+    private void testMapOps() {
+
+        Map<Dish.Type, Dish> collect = menu.stream().collect(Collectors.toMap(Dish::getType, Function.identity()));
+
     }
 
     private void testCorrectReducing() {
