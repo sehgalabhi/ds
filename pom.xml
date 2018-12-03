@@ -6,7 +6,6 @@
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
     <modules>
-        <module>test-job-scheduler</module>
         <module>nimbus-jose-jwt-samples</module>
     </modules>
     <name>ds</name>

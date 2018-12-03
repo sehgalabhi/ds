@@ -32,7 +32,7 @@ public class ThreadInterruptionApproach {
         @Override
         public void run() {
 
-                while (true) {
+                while (!Thread.currentThread().isInterrupted()) {
                     System.out.println("Keep on continuing");
                     try {
                         Thread.sleep(23);

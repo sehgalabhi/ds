@@ -1,0 +1,4 @@
+- quick find
+quick union
+weighted quick union
+weighted quick union with path compression

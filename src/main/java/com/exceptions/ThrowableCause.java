@@ -7,7 +7,26 @@ public class ThrowableCause {
     public static void main(String[] args) throws Exception {
 //        new ThrowableCause().testThrowableInitCause();
 //        new ThrowableCause().testThrowableConstructor();
-        new ThrowableCause().testThrowableCause();
+//        new ThrowableCause().testThrowableCause();
+
+        String test = "44435030335C";
+        System.out.println(test.trim().matches("444350303[0-2]5C"));
+
+        test = "DCP02";
+        System.out.println(test.matches("444350303[0-2]5C"));
+
+
+        test = "DCP03";
+        System.out.println(test.matches("444350303[0-2]5C"));
+
+        test = "dcp01";
+        System.out.println(test.matches("444350303[0-2]5C"));
+
+        test = "dsd01";
+        System.out.println(test.matches("444350303[0-2]5C"));
+
+        test = "DCP03";
+        System.out.println(test.matches("444350303[0-2]5C"));
 
     }
 

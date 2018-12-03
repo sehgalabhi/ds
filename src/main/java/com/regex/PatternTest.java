@@ -8,12 +8,51 @@ import java.util.regex.Pattern;
 public class PatternTest {
 
     public static void main(String[] args) {
+
+        Integer integer = new Integer("0100");
+        System.out.println("0123".replaceFirst("^0*", ""));
+        System.out.println("00000123".replaceFirst("^0*", ""));
+        System.out.println("01230".replaceFirst("^0*", ""));
+        System.out.println("23".replaceFirst("^0*", ""));
+        System.out.println(integer);
+        System.out.println("000000".matches("0{6}"));
+        System.out.println("00000000000".matches("0{11}"));
+        System.out.println("000005".matches("0{6}"));
+        System.out.println("00000".matches("0{6}"));
+        System.out.println("111111".matches("0{6}"));
+
 //        new PatternTest().testGroups();
-
-        new PatternTest().testMatcherStartEnd();
+        new PatternTest().testMatcherStartAndExtract();
+    /*    new PatternTest().testMatcherStartEnd();
         new PatternTest().testMatchesAndLookingAt();
-        new PatternTest().testAppend();
+        new PatternTest().testAppend();*/
 
+    }
+
+    private void testMatcherStartAndExtract() {
+        String REGEX = "ATC_VAL_OFFLINE_RANGE.*";
+        String INPUT = "ATC_VAL_OFFLINE_RANGE=953;ATC_VAL=000;TOKEN_STATE_VAL=000;";
+
+        System.out.println(INPUT.matches(REGEX));
+
+        testPart(REGEX, INPUT);
+
+        String INPUT1 = "TEST1=1;TEST2=2;ATC_CODE=3;TEST3=3";
+        testPart(REGEX, INPUT1);
+        String INPUT2 = "TEST1=1;TEST2=2;ATC_CODE=3;TEST3=3;ATC_OFFLINE=4;";
+        testPart(REGEX, INPUT2);
+
+    }
+
+    private void testPart(String REGEX, String INPUT) {
+        Pattern pattern = Pattern.compile(REGEX);
+        Matcher matcher = pattern.matcher(INPUT);
+        if(matcher.find()){
+            int startIndex = matcher.start();
+            String value = INPUT.substring(startIndex, INPUT.indexOf(";", startIndex));
+            String substring = value.substring(value.indexOf("=")+1, value.length());
+            System.out.println(substring);
+        }
     }
 
     private void testAppend() {
