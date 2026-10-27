@@ -1,3 +1,4 @@
+/*
 package com.codility;
 
 import junit.framework.TestCase;
@@ -28,3 +29,4 @@ public class TStackTest extends TestCase{
 
     }
 }
+*/

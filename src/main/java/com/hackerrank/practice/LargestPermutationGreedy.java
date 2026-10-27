@@ -1,6 +1,5 @@
 package com.hackerrank.practice;
 
-import com.sun.org.apache.xpath.internal.operations.Bool;
 
 public class LargestPermutationGreedy {
     public static void main(String[] args) {

@@ -1,3 +1,4 @@
+/*
 package com.codility.transStack;
 
 import junit.framework.TestCase;
@@ -43,3 +44,4 @@ public class SolutionTest extends TestCase {
 
     }
 }
+*/

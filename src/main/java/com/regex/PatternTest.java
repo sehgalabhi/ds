@@ -1,6 +1,5 @@
 package com.regex;
 
-import com.sun.org.apache.regexp.internal.RE;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;

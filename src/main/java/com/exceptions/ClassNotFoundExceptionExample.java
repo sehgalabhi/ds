@@ -1,6 +1,5 @@
 package com.exceptions;
 
-import sun.reflect.Reflection;
 
 public class ClassNotFoundExceptionExample {
     public static void main(String[] args) {

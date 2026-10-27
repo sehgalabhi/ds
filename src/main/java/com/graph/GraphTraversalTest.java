@@ -1,6 +1,5 @@
 package com.graph;
 
-import com.bellid.util.StringUtilities;
 
 class GraphTraversalTest {
 
